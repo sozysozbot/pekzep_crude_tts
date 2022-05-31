@@ -35,7 +35,7 @@ function f() {
     let blob = new Blob([...blobs]),
       blobUrl = URL.createObjectURL(blob),
       synth_audio = new Audio(blobUrl);
-    synth_audio_tag.src = URL.createObjectURL(synth_audio);
+    synth_audio_tag.src = blobUrl;
     synth_audio.playbackRate = 2;
     synth_audio_tag.playbackRate = 2;
     synth_audio.play();
