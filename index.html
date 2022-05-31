@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Pekzep Primitive TTS</title>
+    
+	<link href="styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="styles/app.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+  <div class="wrapper">
+    
+    <header>
+      <h1>Pekzep Primitive TTS</h1>
+    </header>
+
+    <div style="font-size: 200%;"><label for="which_sentence">Select what to produce:</label>
+
+      <select name="which_sentence" id="which_sentence" onchange="f()">
+        <option>mua2 nan2 xit2 em zap2 zau?</option>
+        <option>zap2 ie pai2 kop1 tui2 pek2 zep1 a nui2.</option>
+        <option>iak1 xizi mun1 aim2 ie hok1 su1 hue.</option>
+        <option>ie zap2 tet un1 su1 aim2.</option>
+        <option>ka1 naip2 uo1 mun1 ho.</option>
+        <option>pai2 a nui2 hue tuai2.</option>
+        <option>ka1 hue hem1 hue.</option>
+        <option>cei2 pai2 mut2 taun1 su1 hue aim2.</option>
+        <option>mua2 py ian1 su1 a ku taun1 ie ze1 su1 hue.</option>
+        <option>zap2 mok1 ian1 su1 ie kaun1.</option>
+        <option>zap2 hia1 ian1 su1 ie kaun1.</option>
+        <option>mua2 py ian1 su1 a ku mun1 taun1 ie ka1 su1 hue.</option>
+        <option>zap2 mok1 mok1 su1 hue ua ian1 su1 ie ku.</option>
+        <option>pai2 hi1 mok1 mok1 su1 hue.</option>
+        <option>mua2 py ian1 su1 a ku taun1 ie ka1 su1 hue.</option>
+        <option>pai2 mua2 hem pai2 mok1 zau ka1.</option>
+        <option>pai2 mua2 hem pai2 bap mok1 zau ka1.</option>
+        <option>pai2 ge mun1 iam1 ua mok1 mot2.</option>
+        <option>pai2 hia1 sak2 em pai2 mot2 ta.</option>
+        <option>zap2 hei2 em zap2 kuak1.</option>
+        <option>zap2 hia1 kait ni1 pa2.</option>
+        <option>ka1 pa2 sam1 mok1 kit kit gak1 gak1.</option>
+        <option>ni1 pa2 aim2 pai2.</option>
+        <option>xem1 a pa2 kit ma1.</option>
+        <option>zap2 zat1 pa2.</option>
+        <option>ie et2 kia1 hia1 tui2 ut2 et2 iam1 ku ie pa2.</option>
+        <option>ze1 nui2 cuk2 sam1 mok1 kit gak1. y mun1?</option>
+        <option>nui2 cuk2 nui2 ku gak1.</option>
+        <option>pai2 zip1 su1 ta.</option>
+        <option>tet ik2 cuk2 aim2 can2 ka1 uo1.</option>
+        <option>taun1 ie zap2 py sui1 a su1 aim2 zap2.</option>
+        <option>pai2 kit hia1 kait.</option>
+        <option>zap2 mun1 lua1 ta ka1 put uo1.</option>
+        <option>zap2 hia1 kait a iam1 hue1 ua ian1 mok1. </option>
+        <option>mua2 ly nui2 taun1.</option>
+        <option>mua2 naip2 kit taun1.</option>
+        <option>ai2 cuk2 naip2 kit taun1</option>
+        <option>zap2 mun1 naip2 taun1.</option>
+        <option>zap2 naip2 kit taun1.</option>
+        <option>zap2 ge a tut1 naip2 kit taun1.</option>
+        <option>et2 sau2 kia1 zap2 hut2 syt2 tun2 ua mok1 kua2 hue ta.</option>
+        <option>zap2 pai2 a ki1 ut2 huok1.</option>
+        <option>pai2 a ki1 ut2 huok1 mun1 auk2 bap ik2 sau2 pet2 a pai2.</option>
+        <option>zap2 ge hia1 ta1 huat1 hia1 mok1 lek1.</option>
+        <option>nan2 xit2 mua2 zep1 ta mun1 put a?</option>
+        <option>"pai2 kuai1. pai2 kit ly taun1 ta" "nau zep1 mun1 put"</option>
+        <option>"et2 sau2 kia1 mua2 sui1 zep1 kik1 zep1 sak2 pai2 yn2?" "aim2. mua2 mun1 hop1 sak2."</option>
+        <option>pai2 a ki1 ut2 huok1 net2 pet2.</option>
+        <option>tui2 pai2 zep1 zep1 cei2 pai2 a ki1 ut2 huok1.</option>
+        <option>pai2 a ki1 ut2 huok1 ut2 ta1 nua2.</option>
+        <option>ki1 ut2 huok1 aim2 pai2.</option>
+        <option>pai2 kit kit hia1 kait.</option>
+        <option>zap2 kit hia1 kait.</option>
+        <option>pai2 hia1 kait sui1 ta1 kik1.</option>
+        <option>lua1 zap2 hop1 pua2 a cuop2 pua2 zap2 kit hia1 kait.</option>
+        <option>lua1 ka1 cuop2 pua2 zap2 hia1 kait.</option>
+        <option>pai2 py sui1 ta1 kik1 yn2?</option>
+        <option>pai2 ie ka1 hue py sui1 ta1 kik1 yn2?</option>
+        <option>hia1 nau sui1 ut2 ta1 kik1 ie ka1 hue.</option>
+        <option>zap2 ge mok1 ta1 ta huat1 hia1 mok1 lek1.</option>
+        <option>et2 sau2 kia1 zap2 ge ta1 mok1 lek1.</option>
+        <option>et2 sau2 kia1 zap2 nui2 pek2 zep1.</option>
+        <option>et2 sau2 kia1 xem1 aim2 mut2 yn2?</option>
+        <option>et2 sau2 kia1 iei2 xizi sak2.</option>
+        <option>et2 sau2 kia1 iei2 xizi ty sak2.</option>
+        <option>kak aim2 yn2?</option>
+        <option>put yn2?</option>
+        <option>ua. ka1 nan2?</option>
+        <option>pai2 can2 cei2 ka1.</option>
+        <option>zap2 mun1 mok1 can2 sak2 a.</option>
+        <option>ai2 sip1 ho1 nim2 sip1.</option>
+        <option>zap2 hut2 syt2 tun2 sau2 nui2 hue ian1 ta.</option>
+        <option>ka1 mua2 a mut2 yn2?</option>
+        <option>ka1 pai2 hue1 kak aim2 a mut2.</option>
+        <option>ie pai2 nun1 let1 su1 aim2.</option>
+        <option>ie mua2 kit1 ue1 let1 su1 aim2 hem zau nan2?</option>
+        <option>zap2 kit ho1.</option>
+        <option>zap2 zep1 ta kit hia1 kait.</option>
+        <option>pai2 hia1 kit kait.</option>
+        <option>zap2 ge a po1 kait.</option>
+        <option>pai2 ge a po1 kit kait.</option>
+        <option>zap2 ge mok1 kait po1.</option>
+        <option>zap2 ie ka1 su1 mok1 cuk2 po1.</option>
+        <option>zap2 mut2 po1 kit kait.</option>
+        <option>zap2 pai2 mut2 a tui2 nui2 cuk2.</option>
+        <option>mua2 ie kak aim2 ly zau. yn2?</option>
+        <option>pai2 mun1 can2 zau kak aim2 y mun1.</option>
+        <option>mua2 be1 ut2 mok1 yn2?</option>
+        <option>tuik1 can2 a.</option>
+        <option>tuik1 can2 ka1 no1.</option>
+        <option>ka1 xuo1 kit ta1 tum1.</option>
+        <option>ka1 kait hue.</option>
+        <option>mua2 tak1 kit tum1.</option>
+        <option>pai2 pek2 zep1 tui2 nui2 cuk2 kit tum1.</option>
+        <option>zap2 gak1 a ty sak2.</option>
+        <option>zap2 kit gak1 a ty sak2.</option>
+        <option>kia1 ka1 kak mok1 sau2.</option>
+        <option>syt2 aik2 gak1 a bo1. </option>
+        <option>zap2 a ta1 ka1 tum1.</option>
+        <option>ka1 nan2 cuk2 a lit1 sip1 ak1.</option>
+        <option>mua2 a lit1 sip1 ak1 aim2 nan2 hue? aim2 mut2.</option>
+        <option>ka1 mua2 a lit1 sip1 ak1 yn2? mun1. ka1 zap2 a (a).</option>
+        <option>ka1 pai2 a lit1 sip1 ak1.</option>
+        <option>ka1 iak1 xizi a lit1 sip1 ak1.</option>
+        <option>ka1 xo1 xizi a lit1 sip1 ak1.</option>
+        <option>pai2 lua1 ta iei2 xizi kit can2 kait.</option>
+        <option>et2 niep1 no1 aim2 ie cet2.</option>
+        <option>et2 ut2 kia1 zap2 aim2 mut2.</option>
+        <option>et2 ut2 kia1 zap2 py sak2 yn2?</option>
+        <option>mua2 zep1 nan2 mak2 zep1?</option>
+        <option>pek2 zep1 ka1 kit pua2 aim2 a zep1.</option>
+        <option>pai2 mun1 can2 mua2 a zep1.</option>
+        <option>mua2 can2 sak2 ka1 hue a man1 dat2 yn2?</option>
+        <option>zap2 tum1 ua aim2 hop1 taun1 su1.</option>
+        <option>ka1 kik1 lek1 ge kit hem1.</option>
+        <option>ka1 kia1 zap2 kit hem1.</option>
+        <option>tui2 pai2 ta1 ze1 kik1 lek1.</option>
+        <option>zap2 can2 ka1 tui2 nui2 cuk2.</option>
+        <option>mua2 can2 ka1 tui2 nui2 cuk2 yn2?</option>
+        <option>tui2 nui2 cuk2 hia1 tui2 nui2.</option>
+        <option>zap2 pai2 a uai1.</option>
+        <option>mua2 hia1 kait mua2 a uai1 yn2?</option>
+        <option>pai2 a uai1 zep1 "bau2 cuk2 aim2 ua ly mok1 uaip2".</option>
+        <option>uai1 zep1 mok1 ka1 kait.</option>
+        <option>ie nom2 mak2 kia1 syt2 nua2 ut2.</option>
+        <option>syt2 nua2 ut2 hem pai2 mun1 mok1 mok1.</option>
+        <option>hia1 ty zau ut2 at pai2.</option>
+        <option>pai2 hia1 ty ta1 ka1 ak1.</option>
+        <option>cue1 cuk2 mok1 lit1 ta.</option>
+        <option>tui2 pai2 mok1 lit1.</option>
+        <option>zap2 sak2 ta ka1 hue a xit2 ka1 nan2?</option>
+        <option>zap2 mun1 hia1 zap2 sak2.</option>
+        <option>zap2 sak2 a hia1 ka1 mun1.</option>
+        <option>ie kua2 hue pai2 naip2 a hia1 aim2.</option>
+        <option>zap2 mun1 hia1 sak2.</option>
+        <option>zap2 nui2 pek2 zep1 a hia1 aim2.</option>
+        <option>mua2 naip2 ta taun1 u1 giau.</option>
+        <option>syt2 pua2 kan1 u1 giau.</option>
+        <option>zap2 pai2 a sa1 sau2 huok1.</option>
+        <option>mua2 a sa1 sau2 huok1 nan2 kak sak2 ai2 sip1?</option>
+        <option>tui2 pai2 zep1 zep1 cei2 pai2 a sa1 sau2 huok1.</option>
+        <option>mua2 can2 pai2 a sa1 sau2 huok1?</option>
+        <option>mua2 a kua2 kait ie pai2 a (a).</option>
+        <option>pai2 mun1 mok1 mok1 naip2 hue.</option>
+        <option>uai1 mun1 aim2 ie naip2 hue.</option>
+        <option>mua2 hi1 mok1 mok1 naip2 hue yn2?</option>
+        <option>zap2 mok1 mok1 naip2 hue.</option>
+        <option>zap2 em nan2 mok1 naip2 hue?</option>
+        <option>zap2 em nan2 mok1 nui2 hue?</option>
+        <option>ka1 hue pai2 naip2.</option>
+        <option>mua2 em nan2 mok1 naip2 hue?</option>
+        <option>mua2 em nan2 mok1 nui2 hue?</option>
+        <option>ie zap2 a pia2 co1.</option>
+        <option>kua2 aim2 ie cet2.</option>
+        <option>cei2 ka1 hue pai2 nui2 hi1 a mut2 mun1.</option>
+        <option>maun1 sam1 mok1 kit gak1.</option>
+        <option>nui2 hue gak1 a in2 giau1.</option>
+        <option>ka1 tak1 kit tum1.</option>
+        <option>taun1 nim2 aim2 ai2 sip1.</option>
+        <option>tam2 dop1 ka1 ai2 sip1 a (a).</option>
+        <option>zap2 pai2 a sa1.</option>
+        <option>zap2 a sa1 kat1 can2 kait ua tum1.</option>
+        <option>zap2 tum1 ua can2 kait.</option>
+        <option>pai2 ge ly hok1.</option>
+        <option>zap2 hia1 huet ua zap2 hia1 hok1.</option>
+        <option>pai2 ly at hok1.</option>
+        <option>nan2 kak nui2 cuk2 ge hok1?</option>
+        <option>zap2 em xuo1 hem1.</option>
+        <option>pai2 py cei2 lip zep1 ie pek2 zep1.</option>
+        <option>hia1 cei2 zep1 ut2 ka1 zep1 zep1 ie lip zep1.</option>
+        <option>zap2 cei2 zep1 ta kit taun1 ak1.</option>
+        <option>pai2 ge hia1 kait ta1 kait ak1.</option>
+        <option>ka1 xit2 pai2 hia1 mok1 cei2 zep1 cuk2.</option>
+        <option>cei2 nom2 zuo1 mok1 ta ie pai2 cei2 ka1 ak1 a hue1 nin1 a lip zep1.</option>
+        <option>zap2 ge kan1 ta kit sue1.</option>
+        <option>et2 kaun1 aim2 ie mut2 son1.</option>
+        <option>pai2 can2 ka1 lin man1.</option>
+        <option>"mua2 py kua2 lin man1 yn2?" "mun1."</option>
+        <option>lin man1 ka1 kua2 pek1.</option>
+        <option>kua2 lin man1 ka1 kit pek1.</option>
+        <option>zap2 py kua2 lin man1.</option>
+        <option>"kua2 lin man1 ka1 pek1 yn2?" "aim2. pai2 mun1 can2 lin man1."</option>
+        <option>ka1 kak mua2 aim2 ta1 nan2 ak1?</option>
+        <option>ka1 ak1 kit ma1 su1.</option>
+        <option>ka1 kia1 syt2 pua2 kit lok1.</option>
+        <option>syt2 pua2 mok1 lok1 ta.</option>
+        <option>syt2 pua2 lok1.</option>
+        <option>ly lit1 py ie nui2.</option>
+        <option>ka1 pai2 a ne2.</option>
+        <option>pai2 aim2 hop1 et2 ne2.</option>
+        <option>zap2 pai2 a ki1.</option>
+        <option>syt2 kit nuok2.</option>
+        <option>zap2 kuak1 mok1 kaun1 a cuk2.</option>
+        <option>zap2 kuak1 mi2 kaun1 a cuk2.</option>
+        <option>pai2 ie non1 po1 mun1 hia1 mok1 kaun1.</option>
+        <option>"pet2 xizi zep1 uep1 zep1 kit kait." "aim2. om2 pet2 zap2 mut2 aim2 ie huok1 dop1." </option>
+        <option>ka1 kit kait a nui2 hue.</option>
+        <option>pai2 aim2 ta1 ak1.</option>
+        <option>pai2 hia1 kait iam1 gek.</option>
+        <option>muo1 puak1 a!</option>
+        <option>pai2 can2 mua2 a ki1 sau2 huok1.</option>
+        <option>pai2 a ki1 sau2 huok1 aim2 hop1 li1.</option>
+        <option>pai2 a ki1 sau2 huok1 can2 kua2 pek2 zep1 a sit1.</option>
+        <option>ka1 su1 li1.</option>
+        <option>pai2 mut2 aim2 cei2 su1 li1.</option>
+        <option>xizi xizi. su1 li1 aim2 ie nan2 hue a?</option>
+        <option>ie nan2 kak mua2 at pai2 py mok1 ie su1 li1?</option>
+        <option>pai2 mun1 can2 nan2 kak auk2 xy1 mok1 ka1 naip2 uo1.</option>
+        <option>put hia1 xi1 mok1 yn2?</option>
+        <option>hia1 tu2 xi1 mok1 yn2?</option>
+        <option>ka1 kia1 syt2 pua2 kait hem pai2 ge ly tu2 xi1 mok1 a.</option>
+        <option>su1 hue mun1 mok1 et2 mak2 kia1.</option>
+        <option>nan2 cuk2 lo ka1?</option>
+        <option>zap2 aim2 hau2 ua zap2 bap hau2.</option>
+        <option>hup1 xi1 aim2 hup1.</option>
+        <option>ka1 uo1 kit xep2.</option>
+        <option>pai2 lua1 can2 ta xep2 uo1.</option>
+        <option>pai2 mun1 hia1 tim1 ie ze1 kak auk2.</option>
+        <option>mua2 a sa1 ut2 huok1 nan2 kak mok1 sau2 nui2 hue?</option>
+        <option>kia1 pet2 kit ma1.</option>
+        <option>pau1 pai2 mun1 cuk2 aim2 ze1 hue.</option>
+        <option>sau2 nui2 hue zap2 a kuak1 lo a (a).</option>
+        <option>kit kit hia1 kait!</option>
+        <option>ka1 tak1 kit ni1 su1.</option>
+        <option>ze1 kit ni1 su1.</option>
+        <option>ai2 sip1 am zie1 pai2 ie ni1 su1.</option>
+        <option>ka1 ak1 kit sia1.</option>
+        <option>zap2 mut2 ni1 ua sia1.</option>
+        <option>zap2 ge huok1.</option>
+        <option>hia1 tui2 ut2 et2 nin1.</option>
+        <option>mam1 at pai2 ta1 ak1.</option>
+        <option>zap2 ge sa1 kat1 tum1.</option>
+        <option>ka1 ik2 ni1 pa2 kit ta1 tum1.</option>
+        <option>ze1 pa2 kit ta1 tum1.</option>
+        <option>pai2 can2 zap2 mut2 nan2 hue.</option>
+        <option>zap2 sui1 ta mun1 put a lit1 sip1 ak1 ua lit1 ie uep1 sip1.</option>
+        <option>ka1 su1 ni1 su1 mun1 put.</option>
+        <option>tui2 nui2 ie kat1 ge ka1 pek1.</option>
+        <option>pai2 mun1 hia1 kait tia2.</option>
+        <option>hia1 tui2 ut2 et2 niep1 tia2 ie pai2.</option>
+        <option>aim2. pai2 hia1 kait xuo1 tia2. pai2 bap hia1 kait.</option>
+        <option>mua2 hia1 kait tia2 yn2?</option>
+        <option>zap2 pai2 ge a lu2 naip2 hi1 iei2 xizi.</option>
+        <option>mua2 hia1 kait mua2 a naip2 hi1 yn2?</option>
+        <option>mua2 a naip2 hi1 nan2 kak sak2 ai2 sip1?</option>
+        <option>zap2 ket nui2 ie tin1 mut2.</option>
+        <option>taun1 sa1 hi1 aim2 zap2.</option>
+        <option>taun1 hi1 aim2 ie mua2 yn2?</option>
+        <option>zap2 hia1 kait saup1.</option>
+        <option>pai2 ge mun1 can2 et2 ut2 kia1 nan2 aim2.</option>
+        <option>ka1 hue tua1 a nam2 su1 hue.</option>
+        <option>pek1 hia1 ka1 a cuk2 ka1 hue1.</option>
+        <option>ap1 kat1 aim2 ka1 hue.</option>
+        <option>hia1 ty zep1 ut2.</option>
+        <option>ty zep1.</option>
+        <option>nui2 ie pau1 sip1 ka1 ma1 su1.</option>
+        <option>zap2 a pek2 zep1 zep1 cuop2 kait yn2?</option>
+        <option>pai2 hi1 a pek2 zep1 zep1 cuop2 kit kait.</option>
+        <option>mua2 a pek2 zep1 zep1 cuop2 kit kait.</option>
+        <option>ka1 tui2 nui2 cuk2 a zep1 cuop2 mun1 kait.</option>
+        <option>pai2 a pek2 zep1 zep1 cuop2 mun1 kait.</option>
+        <option>pai2 a nui2 cuk2 a lip zep1 zep1 cuop2 mun1 kait.</option>
+        <option>zap2 a pek2 zep1 zep1 cuop2 mun1 kait.</option>
+        <option>pai2 lua1 can2 tui2 nui2 cuk2 a zep1 cuop2 mun1 kait.</option>
+        <option>zap2 a pek2 zep1 zep1 cuop2 kit kait.</option>
+        <option>ka1 po1 io1.</option>
+        <option>pai2 sui1 xi1 ie xi1 mok1.</option>
+        <option>nau mi2 pai2 xi1 a!</option>
+        <option>pai2 ly lin mok1 ka1 pia2.</option>
+        <option>hia1 uaip2 ut2 pai2 lin mok1 pai2 mut2.</option>
+        <option>pai2 mok1 lit1 kan1 nua2 ua zau lin tat2.</option>
+        <option>pai2 hia1 kait iam1 kan1 nua2.</option>
+        <option>pai2 zat1.</option>
+        <option>zap2 zat1 nan2?</option>
+        <option>be1 cuk2 zat1 hia1 co1.</option>
+        <option>mua2 hia1 kait nan2 pok a kua2?</option>
+        <option>pai2 hia1 kait xem1 pok.</option>
+        <option>zap2 huok1 dop1 a cuk2.</option>
+        <option>ian1 giau1 aim2 tyn1.</option>
+        <option>nan2 mak2 ki1 aim2 ie ka1 nui2 hi1 dat2?</option>
+        <option>pai2 ta1 ta et2 ne2 mok1 et2 pa2 a yp.</option>
+        <option>zap2 tat2 kit mok1 kait.</option>
+        <option>zap2 tat2 kit kait.</option>
+        <option>zap2 pet2 ho1 a ki1 kit tat2 kait.</option>
+        <option>pet2 ho1 a ki1 cy2 ta.</option>
+        <option>zap2 mok1 ta xy1 tat2.</option>
+        <option>zap2 et2 sip1 a io.</option>
+        <option>nui2 hue aim2 nun1 un1 ue1 zuo1 ie pai2 mut2.</option>
+        <option>nui2 hue aim2 cei2 pai2 mut2.</option>
+        <option>pai2 bap aim2 iam1 det tia2 a.</option>
+        <option>pai2 hia1 guk2 et2 niep1 det tia2.</option>
+        <option>zap2 hia1 kait iam1 det tia2.</option>
+        <option>pai2 sui1 su1 ta et2 niep1 det tia2.</option>
+        <option>pai2 aim2 iam1 taun1 tia2.</option>
+        <option>zap2 iam1 ta taun1 u1 giau det tia2.</option>
+        <option>det tia2 kik1 ket mun1 mok1.</option>
+        <option>ka1 ni1 pa2 a im1 kit auk2.</option>
+        <option>ka1 kua2 a im1 kit kait.</option>
+        <option>kat1 ly mun1 ta1 ka1 mok1 lek1.</option>
+        <option>pai2 hi1 zep1 zap2 mok1 mok1 su1 hue ua ian1 su1 ie mo1.</option>
+        <option>pai2 iam1 ta et2 niep1 mo1.</option>
+        <option>et2 sau2 kia1 pai2 a nun1 nik2 pui1 pet2 hut2.</option>
+        <option>zap2 sui1 su1 ta li1.</option>
+        <option>zap2 mun1 can2 pet2 xizi.</option>
+        <option>pet2 xizi mun1 sau2 nui2 hue cuk2.</option>
+        <option>pet2 xizi nan2 kak mok1 huok1 dop1?</option>
+        <option>pet2 xizi mun1 py zep1 lip zep1.</option>
+        <option>mua2 em nan2 can2 pet2 xizi.</option>
+        <option>pet2 xizi zep1 lip zep1 mun1 kait.</option>
+        <option>pai2 can2 pet2 xizi.</option>
+        <option>ka1 pet2 xizi a hop1 zep1 kik1.</option>
+        <option>pet2 xizi aim2 ie hok1 su1 hue.</option>
+        <option>ka1 kia1 pet2 xizi kit hia1 huet.</option>
+        <option>lu2 pet2 kait sak2!</option>
+        <option>pet2 xizi aim2 ie su1 hue.</option>
+        <option>pet2 xizi mun1 hop1 hop1 zep1 kik1.</option>
+        <option>xizi xizi. pet2 xizi aim2 ie nan2 hue?</option>
+        <option>pet2 xizi mun1 uep1 cuk2.</option>
+        <option>pet2 xizi sak2 nan2 hue?</option>
+        <option>sui1 zep1 kik1 zep1 ie pet2 xizi.</option>
+        <option>lu2 pet2 kait sak2 ie mua2.</option>
+        <option>zap2 zep1 lu2 pet2 kait sak2 ie zap2 a mam1 kuak1.</option>
+        <option>pai2 ly mok1.</option>
+        <option>zap2 ge ly naip2 ie om2 nun1 zuo1.</option>
+        <option>hok1 ie om2 nun1 zuo1 ka1 xo2.</option>
+        <option>pai2 ge ly mok1 nui2 hue a!</option>
+        <option>ik2 gy1 ik2 ka1 ap1.</option>
+        <option>pai2 ge ly huat1 uaip2.</option>
+        <option>nui2 hi1 ket huat1 uaip2.</option>
+        <option>ik2 sip1 huat1 zep1.</option>
+        <option>et2 niep1 det tia2 aim2 ie cet2.</option>
+        <option>be1 cuk2 aim2 cy2 cei2 cet2.</option>
+        <option>ka1 dop1 kit hem1.</option>
+        <option>ka1 kia1 zap2 kit kan1 puat2.</option>
+        <option>pai2 hia1 a ki1 kat1 mun1 hia1 pai2.</option>
+        <option>nan2 xit2 pai2 a sa1 mun1 hia1 pai2?</option>
+        <option>pai2 hia1 non1 mua2.</option>
+        <option>ki1 kat1 zat1 sui1 lup1 muak1.</option>
+        <option>mua2 zat1 ian1 mok1 sip1 ua nui2 ie pau1 sip1 yn2?</option>
+        <option>cuop2 taun1 u1 giau a.</option>
+        <option>pai2 mut2 aim2 a huep2 ka1 kit cuop2 taun1.</option>
+        <option>pai2 zep1 zap2 nau mok1 nui2 hue.</option>
+        <option>ka1 hue hio1 pai2 ge sui1 ta1 kik1 yn2?</option>
+        <option>ka1 em ze1.</option>
+        <option>mua2 em kit kan1 puat2.</option>
+        <option>zap2 sui1 kaun1 mok1 naip2 hue.</option>
+        <option>pai2 ie mua2 py tui2 mok1 kaun1 sit1.</option>
+        <option>zap2 aim2 nui2 mok1 kaun1 a sit1.</option>
+        <option>xo1 sak2 ta.</option>
+        <option>xo1 a syt2 pua2 kit kan1.</option>
+        <option>iat1 sak2 ta.</option>
+        <option>iat1 a syt2 pua2 lok1 u1 giau.</option>
+        <option>pai2 mut2 ket lin.</option>
+        <option>zap2 hia1 kait lin a (a).</option>
+        <option>zap2 hia1 kait dat2 xuo1.</option>
+        <option>ka1 kat1 be1 kit tum1.</option>
+        <option>zap2 aim2 hop1 om2 kat1.</option>
+        <option>zap2 kat1 ge mun1 can2 kait.</option>
+        <option>zap2 ge aim2 hop1 ik2 kat1.</option>
+        <option>ze1 kat1 can2 kait.</option>
+        <option>ka1 kak mok1 lit1 ie kaun1 a!</option>
+        <option>mam1 aim2 tu2 at zap2 a kat1.</option>
+        <option>hia1 zep1 ut2 mua2 a sau2 sin1.</option>
+        <option>xizi xizi. mua2 a mut2 sin1 ka1 nan2?</option>
+        <option>pai2 ge ie kat1 tui2 num1 tin1 a sit1.</option>
+        <option>zap2 tat2 ho1 u1 giau.</option>
+        <option>ie ka1 xit2 mun1 pai2.</option>
+        <option>pai2 sep ta su1.</option>
+        <option>zap2 ie hop1 aim2 hop1 et2 nin1 zuo1.</option>
+        <option>zap2 ge kun2 bap a tak1.</option>
+        <option>kait a mok1 lek1 yn2?</option>
+        <option>ka1 mui1 kit ma1.</option>
+        <option>ka1 kit auk2 a nut2.</option>
+        <option>nut2 aim2 ka1 hue.</option>
+        <option>nau iam1 nut2 nua2.</option>
+        <option>ka1 nut2 a dit1 tuik1 kait.</option>
+        <option>ze1 kat1 mun1 hia1 kait iam1 mui1.</option>
+        <option>ze1 kat1 mun1 hia1 kait iam1 non1 mui1.</option>
+        <option>no1 hue nan2 hue?</option>
+        <option>zap2 hia1 kait kok1 tak1.</option>
+        <option>ka1 mok1 lek1 kit zat1.</option>
+        <option>pai2 hia1 kait iam1 no1.</option>
+        <option>"pai2 kuak1 mun1 iam1 no1." "pai2 kuak1 bap."</option>
+        <option>ua. ik2 cuk2 aim2 kaik ie no1 hue.</option>
+        <option>zap2 aim2 nui2 be1 huep2 a po1 lek1.</option>
+        <option>ka1 po1 lek1.</option>
+        <option>pai2 hi1 tui2 ta po1 lek1 ie pai2.</option>
+        <option>ka1 nan2 cuk2 a po1 lek1?</option>
+        <option>zap2 ge lit1 nua2 ta.</option>
+        <option>muak1 lit1 nua2 ut2.</option>
+        <option>zap2 aim2 kua2 man1 dat2.</option>
+        <option>tui2 nui2 cuk2 tui2 ie pai2 ge lu2 man1 dat2.</option>
+        <option>zap2 ty can2 sak2 ta pai2 a sin1.</option>
+        <option>zap2 kut2 tui2 et2 gek ie pa2.</option>
+        <option>zap2 zep1 ua tui2 gui2 ie zap2.</option>
+        <option>pa2 ne2 a pau1 ka1 nan2?</option>
+        <option>hup1 saup1 at maun1 a pau1 ka1 nan2?</option>
+        <option>dau2 a man1 at maun1 a man1 a pau1 em nan2?</option>
+        <option>pai2 mun1 py zep1 pau1 zep1.</option>
+        <option>zep1 pau1 zep1 ka1 pek1 yn2?</option>
+        <option>nui2 pau1 zep1 ka1 mun1 pek1.</option>
+        <option>zap2 mun1 can2 pau1 zep1 a zep1 sit1.</option>
+        <option>nui2 pau1 zep1 ka1 pek1.</option>
+        <option>pia2 kit huet.</option>
+        <option>ik2 cuk2 aim2 ie pia2.</option>
+        <option>su1 at ak1 at lit1 sip1 ak1. pai2 zip1 be1 ta a.</option>
+        <option>ka1 ak1 at pai2 a ak1 bap.</option>
+        <option>pai2 hia1 kait po1 im1 a tak1.</option>
+        <option>po1 saup1 aim2 ie ze1 hue.</option>
+        <option>ka1 sy2 kit pek1.</option>
+        <option>ka1 kia1 zap2 aim2 kun2 tam2 pok a tak1.</option>
+        <option>ta1 tam2 pok ka1 kait ie ta1.</option>
+        <option>pai2 aim2 ta1 ie zap2.</option>
+        <option>pai2 aim2 ta1 mua2.</option>
+        <option>nan2 xit2 zap2 ty sak2 ie tin1 sip1?</option>
+        <option>pai2 mok1 ty sak2 ie pai2 a sip1.</option>
+        <option>zap2 mok1 ty sak2 ie tin1 sip1.</option>
+        <option>nan2 kak zap2 ty sak2 ie tin1 sip1?</option>
+        <option>pai2 mok1 ty sak2 ie nap1 ut2 kia1.</option>
+        <option>ka1 kia1 pua2 kan1.</option>
+        <option>pai2 lua1 can2 gau2 nua2 a xo1 kit kan1.</option>
+        <option>zap2 hia1 can2 gau2 nua2 xo1 kit pua2 kan1.</option>
+        <option>zap2 hia1 can2 gau2 nua2 xo1 pua2 kan1 u1 giau.</option>
+        <option>ik2 ut2 kia1 pai2 mok1 ty sak2 ie gau2 nua2.</option>
+        <option>ik2 ut2 kia1 pai2 aim2 ze1 hue.</option>
+        <option>tum1 hua1 ka1 tum1.</option>
+        <option>mua2 ly can2 can2. ka1 bu1 kit xo2.</option>
+        <option>nau bet2 pai2 a hia1 a!</option>
+        <option>taun1 uep1 cuk2 hia1 kait zap2 a so1 sip1.</option>
+        <option>li1 zie1 aim2.</option>
+        <option>ka1 po1 kit na1.</option>
+        <option>ka1 sia1 zui1 kit pua2 aim2.</option>
+        <option>ze1 hue pua2 aim2 yn2?</option>
+        <option>mok1 ze1 hue hem pua2 aim2 yn2?</option>
+        <option>zap2 ge kit hei2.</option>
+        <option>pai2 hia1 iam1.</option>
+        <option>pai2 ty sak2 mut2 a kak pai2 kit hia1 iam1.</option>
+        <option>ki1 iam1 ta et2 niep1 a no1 ua hok1 ta.</option>
+        <option>zap2 naip2 ta ua sui1 kaun1 mok1 mut2.</option>
+        <option>ie nan2 kak zap2 ta naip2 uo1?</option>
+        <option>ie nan2 kak mua2 ta naip2 uo1?</option>
+        <option>ie nan2 kak xo1 xizi ta naip2 uo1?</option>
+        <option>hia1 nam2 ut2 giau1.</option>
+        <option>ka1 kak pai2 ly taun1 ua pai2 hia1 et2 ut2 kia1 mua2 zep1 zep1 ie pai2.</option>
+        <option>nun1 et2 dat2 aim2 ie uep1 sip1.</option>
+        <option>iei2 sak2 ta.</option>
+        <option>iei2 a syt2 pua2 kit kait.</option>
+        <option>pai2 kit hia1 non1 zap2.</option>
+        <option>be1 cuk2 hia1 non1 zap2.</option>
+        <option>xizi xizi. pai2 py cy2 ie ka1 cy2 yn2?</option>
+        <option>ka1 tua1 kit nua2 aim2.</option>
+        <option>ka1 mui1 kit nua2 aim2.</option>
+        <option>mua2 mok1 ie ak1 su1 hue yn2?</option>
+        <option>ak1 su1 hue mun1 ma1.</option>
+        <option>tui2 nui2 cuk2 aim2 ak1 su1 hue.</option>
+        <option>ak1 su1 hue ma1 yn2?</option>
+        <option>ak1 su1 hue kit ni1.</option>
+        <option>xizi xizi. ak1 su1 hue aim2 nan2 hue a?</option>
+        <option>xizi xizi. mua2 mok1 ie ak1 su1 hue yn2?</option>
+        <option>pai2 a nui2 hi1 mok1 ie ak1 su1 hue.</option>
+        <option>ka1 a ak1 su1 hue guk2 su1 ie ak1 at tak1.</option>
+        <option>pai2 zip1 ta buo1.</option>
+        <option>mua2 ta1 ta pai2 a buo1 yn2?</option>
+        <option>zap2 mok1 ta cue1 hue.</option>
+        <option>pai2 can2 zap2 cuk2 ge a et2.</option>
+        <option>ie mua2 su1 aim2 yn2?</option>
+        <option>zap2 ka1 ho1 ki1.</option>
+        <option>pai2 lua1 can2 ta ka1 tui2 nui2 cuk2 kit pua2 mun1.</option>
+        <option>zap2 a huat1 hia1 sa1 kit pua2 mun1.</option>
+        <option>nui2 lip zep1 ka1 pua2 mun1 yn2?</option>
+        <option>pai2 a sa1 ut2 huok1 kit pua2 mun1.</option>
+        <option>pai2 lua1 can2 ta nui2 lip zep1 kit pua2 mun1.</option>
+        <option>zap2 aim2 gau2 tua1.</option>
+        <option>ka1 hok1 su1 hue kit ni1 su1.</option>
+        <option>zap2 aim2 kua2 et2 lek1.</option>
+        <option>zap2 can2 sep su1 a sit1.</option>
+        <option>kit cai1 non1 a!</option>
+        <option>ka1 kia1 pai2 nua2 puat2.</option>
+        <option>zap2 em nua2 puat2.</option>
+        <option>et2 sau2 kia1 xo1 xizi nua2 puat2.</option>
+        <option>mua2 em kit nua2 puat2.</option>
+        <option>et2 sau2 kia1 iei2 xizi nua2 puat2.</option>
+        <option>xo1 xizi em kit nua2 puat2 a.</option>
+        <option>nau zau nua2 puat2 u1 giau a!</option>
+        <option>ie pai2 ka1 pua2 aim2.</option>
+        <option>et2 hup1 aim2 cei2 po1.</option>
+        <option>et2 ma1 pa2 aim2 hok1 ie po1.</option>
+        <option>mua2 mun1 ly zip1 tin1 kak.</option>
+        <option>ka1 su1 la1 ian1 mok1 kaun1.</option>
+        <option>zap2 aim2 sui1 tei1 kaun1.</option>
+        <option>zap2 mok1 sui1 tei1 kaun1.</option>
+        <option>taun1 kaun1 u1 giau aim2 ie po1.</option>
+        <option>mua2 lua1 can2 yn2?</option>
+        <option>zap2 sep ta taun1 su1.</option>
+        <option>mun1 kit sau2 kak zap2 mut2 tuai2 ie ian1 sit1 mut2.</option>
+        <option>zap2 aim2 hop1 et2 ian1 sit1 mut2.</option>
+        <option>ka1 kit ma1 a ian1 sit1 mut2.</option>
+        <option>ka1 ian1 sit1 mut2 kit ma1.</option>
+        <option>ka1 ma1 ian1 sit1 mut2 mun1 ta. ka1 aim2 hem mun1 naip2 a cuk2 taun1 ian1 ta. </option>
+        <option>pai2 hia1 kait kok1 xuo1 pau1 ua zap2 tui2 liok1 xuo1 ie pai2.</option>
+        <option>let1 ka1 liok1.</option>
+        <option>ka1 hue let1 bo1.</option>
+        <option>aim2 ut2 let1.</option>
+        <option>sip1 a be1 cuk2 can2 kait ka1.</option>
+        <option>pai2 hia1 kait mo1.</option>
+        <option>pai2 aim2 iam1 mo1.</option>
+        <option>ka1 em uet.</option>
+        <option>ka1 kan1 tua1 kit ma1.</option>
+        <option>zap2 ian1 su1 ie kan1 tua1.</option>
+        <option>et2 kan1 tua1 aim2 cet2.</option>
+        <option>om2 kan1 tua1 aim2 pai2.</option>
+        <option>zap2 aim2 iam1 kan1 tua1.</option>
+        <option>zap2 xi1 guk2 gui2.</option>
+        <option>pai2 xi1 guk2 gui2.</option>
+        <option>pai2 aip1 xi1 guk2 gui2 ua om2 kia1 ie mut2 mun1 ian1 mok1.</option>
+        <option>zap2 aip1 ta pau1 ua kait tun2 aim2 zap2 ua zap2 mun1 guk2 ta gui2.</option>
+        <option>pai2 aim2 hop1 mok1 syt2 tun2.</option>
+        <option>pai2 aim2 hop1 mok1 uep1 sip1.</option>
+        <option>mua2 aim2 hop1 mok1 uep1 sip1 yn2?</option>
+        <option>pai2 mun1 hop1 mok1 syt2 tun2.</option>
+        <option>pai2 mun1 hop1 mok1 ai2 sip1.</option>
+        <option>mua2 a uai1 aim2 hop1 mok1 ai2 sip1 yn2?</option>
+        <option>pai2 aim2 hop1 mok1 kua2 hue.</option>
+        <option>mua2 aim2 hop1 mok1 kua2 hue yn2?</option>
+        <option>mua2 aim2 hop1 mok1 syt2 tun2 yn2?</option>
+        <option>nan2 xit2 mua2 mun1 hop1 mok1 kua2 hue?</option>
+        <option>pai2 mun1 hop1 mok1 uep1 sip1.</option>
+        <option>mua2 aim2 hop1 mok1 ai2 sip1 yn2?</option>
+        <option>hia1 kua2 ut2 sin1 a.</option>
+        <option>pai2 ki1 kat1 py xi1 mok1 a.</option>
+        <option>ka1 nan2 sip1 a su1?</option>
+        <option>et2 mui1 nan2 su1?</option>
+        <option>be1 kia1 kat1 ly iam1 io2 sik2.</option>
+        <option>ai2 sip1 mun1 ma1 ua pai2 ge a hia1 ka1 ma1.</option>
+        <option>ka1 ik2 giau1 kit em huat1 bap.</option>
+        <option>ie kaik kit1 ue1 cuk2 co1 ta.</option>
+        <option>uet mot2 ta.</option>
+        <option>zep1 sau2. uet aim2 nan2 hue?</option>
+        <option>o. ka1 kit kit kait a can2 uo1 a!</option>
+        <option>ka1 mut2 iam1 uo1 a pia2 mun1.</option>
+        <option>et2 sau2 huet mua2 ie nan2 mun1 py hok1?</option>
+        <option>ie ka1 kak pai2 mun1 hop1 mok1 syt2 tun2.</option>
+        <option>ka1 kia1 kait tun2 aim2 zap2.</option>
+        <option>ze1 ni1 kat1 aim2 zau nan2?</option>
+        <option>zap2 sip1 io.</option>
+        <option>mua2 aim2 ka1 sip1 a hia1 ka1 nan2 auk2 kak?</option>
+        <option>saup1 a mot2 tat2 aim2 ka1 hue.</option>
+        <option>mot2 tat2 aim2 ie nut2 tau2.</option>
+        <option>nut2 nua2 ka1 nua2 nua2 nua2 mok1.</option>
+        <option>syt2 nua2 ut2 hut2.</option>
+        <option>et2 ut2 kia1 syt2 nua2 ut2 yn2?</option>
+        <option>ua. sak2 ua ta1 ka1.</option>
+        <option>kat1 sak2 ta.</option>
+        <option>zap2 kun2 nua2 bo1.</option>
+        <option>uai1 kit can2 hei2.</option>
+        <option>zap2 kit can2 hei2.</option>
+        <option>ka1 can2 hei2 a io1.</option>
+        <option>kat1 ge sui1 tu2 gau2 aim2 tu2. </option>
+        <option>ka1 tu2 gau2 kit ma1 su1.</option>
+        <option>hup1 ie let1 xo2 bup2 mok1. </option>
+        <option>zap2 em mun1 hia1 kait.</option>
+        <option>ze1 ni1 sa1 kat1 kit can2 kait.</option>
+        <option>et2 pui1 kak ni1 sa1 kat1 lit1 mok1 ie tei1 kaun1.</option>
+        <option>taun1 u1 giau kuo1 aim2 ie ka1 iam1 ku.</option>
+        <option>nua2 aim2 puat2.</option>
+        <option>tui2 pai2 zep1 zep1 cei2 pai2 a kait hi1.</option>
+        <option>hia1 tui2 ut2 ie pai2 zap2 ak1.</option>
+        <option>tui2 su1 ua am guk2 ua kit hia1 kait a.</option>
+        <option>et2 sau2 kia1 zap2 ta1 ta et2 ma1 ua auk2 ki1.</option>
+        <option>pai2 mut2 aim2 uep1 sip1 a yk2.</option>
+        <option>zap2 ge kit kait gat2 kan1 a cuk2.</option>
+        <option>ka1 ni1 kat1 kit tum1.</option>
+        <option>ka1 kak ni1 kat1 mun1 py xi1 mok1.</option>
+        <option>ni1 pa2 aim2 o1 ie huep2.</option>
+        <option>ka1 mut2 kit hem1.</option>
+        <option>nan2 mak2 gy1 aim2 ie ka1 mut2?</option>
+        <option>nan2 cuk2 tui2 ta zep1 lip zep1 a nui2 ie zap2?</option>
+        <option>pai2 mun1 can2 io1.</option>
+        <option>cuk2 ly mok1 io1 a po1.</option>
+        <option>pai2 ge ly mok1 iak1 a po1.</option>
+        <option>be1 cuk2 mok1 iak1 a po1.</option>
+        <option>ze1 lup1 mok1 kit sue1 a syt2.</option>
+        <option>kauk2 num1 sip1.</option>
+        <option>ai2 sip1 a sip1 la1 ka1 syt2 tun2.</option>
+        <option>om2 hok1 pia2 aim2 ie ka1 mut2.</option>
+        <option>syt2 mok1 ta mun1 lin.</option>
+        <option>xi1 mok1 a cuk2 ie po1 hue1.</option>
+        <option>pai2 mun1 can2 pai2 ly zau nan2.</option>
+        <option>tui2 pai2 i2 zep1 ie ka1 xep2.</option>
+        <option>nan2 cuk2 mok1 i2 zep1 ie ka1 xep2 a?</option>
+        <option>lo1 bum1 mun1 pok. mun1 py kua2 kun2. hia1 ty ta1 ze1.</option>
+        <option>kot hop1 tam2 pok.</option>
+        <option>iam1 hue taun1 cuk2 aim2.</option>
+        <option>lok1 lia1 kit kait.</option>
+        <option>mua2 ly lua1 can2 kait a.</option>
+        <option>mua2 mun1 hia1 kait ma1 cuop2 lok1 lia1 hem huet kak nau mok1 zap2 a mut2.</option>
+        <option>pai2 a naip2 hi1 zep1 y1 huap1 pek2 zep1 kit kait.</option>
+        <option>mua2 zep1 y1 huap1 pek2 zep1 kit kait.</option>
+        <option>pai2 a hi1 zep1 y1 huap1 pek2 zep1 kit kait.</option>
+        <option>pai2 zep1 y1 huap1 pek2 zep1 mun1 kit kait.</option>
+        <option>zep1 y1 huap1 pek2 zep1 ka1 kit pek1.</option>
+        <option>mua2 ly nui2 huai2 sui1 a man1 dat2.</option>
+        <option>taun1 pet2 aim2 syt2.</option>
+        <option>zap2 mun1 tia1 ta ie iak1.</option>
+        <option>zap2 mun1 tia1 ta ie io1.</option>
+        <option>zap2 at ta et2 niep1 no1.</option>
+        <option>zap2 ge gau2 ta hup1.</option>
+        <option>zap2 can2 mok1 kaun1 a sit1.</option>
+        <option>nan2 kak mua2 mok1 mok1 kit1 tua1?</option>
+        <option>pai2 mun1 hop1 mok1 kit1 tua1.</option>
+        <option>kit1 tua1 em nan2?</option>
+        <option>bu1 ut2 mok1 ta.</option>
+        <option>ka1 bu1 kit mit2.</option>
+        <option>ka1 co1 kit sue1.</option>
+        <option>syt2 nua2 gak1 a ut2 a!</option>
+        <option>zap2 can2 zau ian1 cuop2 kik1 a sit1.</option>
+        <option>ka1 huet kak xem1 kit hem1.</option>
+        <option>ka1 hue a syt2 pua2 kait ie ian1 mok1 tua1 pau1 ua mun1 kait ie ian1 mok1 mo1.</option>
+        <option>nun1 pet2 tim1 ua auk2 kak.</option>
+        <option>kak mun1 tim1 cuk2.</option>
+        <option>zap2 a iam1 gau2 kit liok1.</option>
+        <option>mua2 zep1 mun1 put ie pai2 yn2?</option>
+        <option>zap2 tat2 non1.</option>
+        <option>ka1 kaun1 kit ni1 su1.</option>
+        <option>zap2 ge aim2 su1 tu2.</option>
+        <option>zap2 ge sui1 nin1 cet2 kaik aim2 su1 tu2.</option>
+        <option>pai2 kia1 kia1 xi1 mok1 ie nui2 hue.</option>
+        <option>kaun1 aim2 ie son1.</option>
+        <option>pai2 a nui2 hi1 mun1 hop1 tui2 nui2 ak1.</option>
+        <option>pai2 hia1 ka1 tui2 nui2 ak1 mun1 kait.</option>
+        <option>zap2 aim2 hop1 tui2 nui2 ak1 yn2? </option>
+        <option>tui2 nui2 ak1 mun1 aim2 ie pai2.</option>
+        <option>ka1 pai2 a tui2 nui2 ak1.</option>
+        <option>mua2 aim2 hop1 tui2 nui2 ak1 yn2? </option>
+        <option>xo1 xizi hia1 ian1 su1 ie tui2 nui2 ak1.</option>
+        <option>pai2 mok1 ian1 su1 ie tui2 nui2 ak1.</option>
+        <option>ie nan2 pai2 py ian1 su1 ie pek2 zep1 a tui2 nui2 ak1?</option>
+        <option>zap2 mok1 ian1 su1 ie pek2 zep1 a tui2 nui2 ak1.</option>
+        <option>pai2 hia1 ian1 su1 ie tui2 nui2 ak1.</option>
+        <option>ka1 tui2 nui2 ak1 em nan2?</option>
+        <option>ka1 nan2 cuk2 a tui2 nui2 ak1?</option>
+        <option>ik2 ki1 kat1 aim2 kaik.</option>
+        <option>zap2 aim2 hop1 ik2 naip2.</option>
+        <option>pai2 ki1 kat1 mun1 hop1 naip2 uo1.</option>
+        <option>iam1 tua1 a kak pai2 a pa2 hia1 kait.</option>
+        <option>zap2 hia1 sak2 ai2 sip1.</option>
+        <option>zap2 hia1 sak2 syt2 tun2.</option>
+        <option>man1 aim2 ie co1.</option>
+        <option>ai2 sip1 a huep2 lek1 aim2 ie co1.</option>
+        <option>liok1 hup1 saup1 aim2 ie ka1 hue.</option>
+        <option>ka1 lup1 sui1 lip zep1 zep1 nan2?</option>
+        <option>kat1 ge aim2 tu2 ie kot hue.</option>
+        <option>po1 saup1 iam1 kot ie kot hue.</option>
+        <option>ik2 maun1 aim2 kot hue.</option>
+        <option>zap2 aim2 kun2 ai2.</option>
+        <option>zap2 aim2 kun2 xem1 pok a ai2.</option>
+        <option>cet2 xi1 ka1 kin2.</option>
+        <option>hup1 hue nan2 hue?</option>
+        <option>hup1 hue aim2 ka1 hue.</option>
+        <option>sau2 kak hup1 hue pai2 tu2.</option>
+        <option>zap2 ie ky1 hop1 aim2 hop1 et2 gau2.</option>
+        <option>lup1 cy2 ie hup1 hop1.</option>
+        <option>pai2 py sui1 mua2 a sy2 kua2?</option>
+        <option>em nan2 mua2 zau sy2 kua2?</option>
+        <option>sui1 nan2 mua2 zau sy2 kua2?</option>
+        <option>nan2 sit1 mua2 zau sy2 kua2?</option>
+        <option>pit1 tui2 gui2 ie taun1 cuk2.</option>
+        <option>pai2 zat1 pit1.</option>
+        <option>ua. ta1 a. zap2 nan2?</option>
+        <option>tai. mua2 can2 ze1 nan2?</option>
+        <option>zap2 zip1 naip2.</option>
+        <option>zap2 aim2 hop1 tet et2 xuo1.</option>
+        <option>pok sy2 kua2 taun1 aim2.</option>
+        <option>zap2 guk2 naip2 su1 sau2 mok1.</option>
+        <option>ka1 lu2 ie be1 a tui2 nui2 ak1.</option>
+        <option>muak1 aim2 ie nut2.</option>
+        <option>pai2 ge hop1 ta et2 hup1 saup1.</option>
+        <option>zap2 ge aim2 lo mut2.</option>
+        <option>et2 sau2 pet2 pai2 ge lo ta nun1 om2 ni1 mut2.</option>
+        <option>ka1 niep1 a tia2 kit kan1.</option>
+        <option>pai2 ge ik2 cuk2 kait hi1.</option>
+        <option>pai2 lot2 ie zap2.</option>
+        <option>zap2 nam2 bu1.</option>
+        <option>pai2 hia1 kait iam1 kan1 tua1.</option>
+        <option>a. pai2 ly kuai1.</option>
+        <option>pai2 ly kuai1 pai2 zau ta a uo1.</option>
+        <option>kia1 ut2 mok1 ta.</option>
+        <option>ka1 sy2 a cuau2 huat1 pau1.</option>
+        <option>pai2 a sa1 kat1 kit kait.</option>
+        <option>kia1 sau2 mok1 ie kiak1.</option>
+        <option>ai2 sip1 a be1 cuk2 hia1 kait tin1 a sip1.</option>
+        <option>hia1 in2 ut2 giau1.</option>
+        <option>nan2 kak pai2 ge iam1 ku?</option>
+        <option>nan2 kak iam1 su1 hue ta mok1?</option>
+        <option>mok1 iam1 su1 hue hem mua2 py zau ka1.</option>
+        <option>ni1 pa2 hia1 kait ho2.</option>
+        <option>ie tat2 nan2 mak2 ho2 aim2?</option>
+        <option>et2 sau2 kia1 nan2 cuk2 in2 ta ma1 giau1?</option>
+        <option>let1 kik1 mun1 mok1.</option>
+        <option>pai2 mun1 in2 ta let1 kik1 a giau1.</option>
+        <option>ka1 let1 kik1 xo2 u1 giau ua et2 cuk2 mun1 tui2 mok1.</option>
+        <option>ka1 zap2 ge a lu2 mut2.</option>
+        <option>hia1 sak2 ut2 ie pai2 mut2.</option>
+        <option>zap2 mun1 hop1 mut2.</option>
+        <option>hia1 tui2 sak2 ut2 ik2 niep1 a kot tia2 at et2 niep1 a det tia2.</option>
+        <option>zap2 kun2 ta zap2 a ai2.</option>
+        <option>syt2 nua2 gak1 ut2.</option>
+        <option>ki1 kat1 aim2 mok1 kuak1 a yp.</option>
+        <option>zap2 zip1 yt2 ta.</option>
+        <option>zap2 ge mun1 hia1 bet2 man1 mua2 kua2 a ak1.</option>
+        <option>taun1 hup1 aim2 ie ka1 hue.</option>
+        <option>ka1 auk2 cy2 ho.</option>
+        <option>lup1 mut2 aim2 ie hup1.</option>
+        <option>pai2 zep1 ta mun1 uo1.</option>
+        <option>nau zep1 uo1 ie zap2.</option>
+        <option>ka1 kak pai2 aim2 zau mun1 uo1. pai2 ge huat1 zep1 a.</option>
+        <option>ik2 sau2 kia1 zap2 ge mok1 pau1 ta ie ze1 hue.</option>
+        <option>zap2 kun2 liok1 xi1 tak1.</option>
+        <option>hia1 muo1 bet2 man1 kik1.</option>
+        <option>bet2 man1 kik1 ket mun1 mok1.</option>
+        <option>ik2 sau2 kia1 bet2 man1 kik1 muo1 mok1 ta.</option>
+        <option>ik2 sau2 kia1 pai2 ta1 ta mua2.</option>
+        <option>cuk2 ge tim1 tei1 kaun1.</option>
+        <option>pai2 ge mok1 ta nut2 tau2 ua ta1 ta kia1 sau2 mok1.</option>
+        <option>zap2 ge kit kit hei2.</option>
+        <option>zap2 kit hei2.</option>
+        <option>taun1 su1 aim2 zap2.</option>
+        <option>zap2 aim2 ta1 tui2 nui2 ak1.</option>
+        <option>kauk2 tia1 uai1 po1.</option>
+        <option>tua1 bo1 bu1.</option>
+        <option>tua1 bo1 buo1.</option>
+        <option>zap2 aim2 iam1 tia2.</option>
+        <option>pai2 hia1 kait iam1 tia2.</option>
+        <option>mua2 hia1 iam1 tia2 yn2?</option>
+        <option>zap2 hia1 iam1 tia2.</option>
+        <option>zap2 buo1 kaun1 a cuk2.</option>
+        <option>ie ai2 sip1 zau lu2 hi1 ka1 ho.</option>
+        <option>pai2 aim2 iam1 nua2.</option>
+        <option>zap2 nam2 ta ta1.</option>
+        <option>zap2 ni1 nim2.</option>
+        <option>zap2 a ta1 in2.</option>
+        <option>hon1 kit ho.</option>
+        <option>ka1 tua1 xo2 ap1 zuo1 xo2.</option>
+        <option>zap2 aim2 hue1 kuak1 kuak1.</option>
+        <option>mua2 aim2 kuak1 kuak1 hem iam1 siet1 nua2 at tum1 sik2.</option>
+        <option>nui2 pau1 zep1 kait ka1 mun1 ho.</option>
+        <option>kia1 aik2 ut2 mok1 ie hup1 kot hop1.</option>
+        <option>pai2 py sui1 mua2 a zep1 ak1 yn2?</option>
+        <option>ka1 pai2 a zep1 li1.</option>
+        <option>tui2 pai2 zep1 zep1 cei2 pai2 a sia1 hi1.</option>
+        <option>zap2 aim2 hop1 ai2 sip1 a lit1 sip1 ak1.</option>
+        <option>taun1 zep1 li1 aim2 ie ak1 hy2.</option>
+        <option>zap2 hop1 sak2 et2 ak1 ie hy2.</option>
+        <option>kait lia1 a bai2 kit ma1 su1.</option>
+        <option>ni1 pa2 a im1 ka1 liok1 em let1.</option>
+        <option>ie nan2 kak zap2 mok1 naip2 hue?</option>
+        <option>ie nan2 kak xo1 xizi mok1 naip2 hue?</option>
+        <option>ie nan2 kak mua2 a ut2 sa1 huok1 mok1 nui2 hue?</option>
+        <option>ie nan2 kak nui2 cuk2 mok1 nui2 hue?</option>
+        <option>ie nan2 kak nui2 hue hut2?</option>
+        <option>ie nan2 kak mua2 mok1 nui2 hue?</option>
+        <option>ie nan2 kak mua2 a ut2 ki1 huok1 mok1 nui2 hue?</option>
+        <option>ie nan2 kak mua2 nua2 mok1 ni1 muak1 ie nut2?</option>
+        <option>zap2 ge ie nut2 nua2 mok1 ta hup1.</option>
+        <option>maun1 aim2 sam1 mok1.</option>
+        <option>ie nui2 hue mua2 nau sam1 mok1.</option>
+        <option>mua2 nau sam1 mok1 ie nui2 hue.</option>
+        <option>ka1 hue kan1 hut2 ta.</option>
+        <option>pai2 ge mun1 can2 kan1 ian1 a xit2.</option>
+        <option>nau mi2 pai2 a tak1 a!</option>
+        <option>et2 at et2 ka1 ik2.</option>
+        <option>ni1 kat1 ge aim2 lek1.</option>
+        <option>ka1 hue a zui1 mun1 lin.</option>
+        <option>iak1 xizi hia1 kait ta1 mok1 lek1.</option>
+        <option>ka1 liok1 aik2 sy2 ka1 put.</option>
+        <option>ka1 liok1 aik2 sy2 mun1 put.</option>
+        <option>kauk2 aim2 num1 tin1 sip1.</option>
+        <option>kauk2 ge num1 pai2 ge a sip1.</option>
+        <option>ie nan2 hue pai2 py ian1 su1 ie kun2 ak1?</option>
+        <option>ka1 kun2 ak1.</option>
+        <option>mua2 aim2 hop1 kun2 ak1 yn2?</option>
+        <option>nut2 mok1 mun1 lin hem mui1 mok1 mot2.</option>
+        <option>nut2 nua2 aim2 sau2 mok1.</option>
+        <option>ka1 li1 mut2 kit ma1.</option>
+        <option>be1 kak cuk2 mun1 a mut2 ka1 li1 mut2.</option>
+        <option>zap2 aim2 mi2 gua2.</option>
+        <option>taun1 nim2 aim2 ie cuk2 ge.</option>
+        <option>ka1 sip1 tau2.</option>
+        <option>zap2 a cai1 kai1 ian1 mok1.</option>
+        <option>ka1 zap2 a lu2 mut2.</option>
+        <option>pai2 ge ian1 su1 ie lu2 mut2.</option>
+        <option>pai2 hia1 mok1 iat1 hia1.</option>
+        <option>pai2 sam1 mok1 ie naip2 hue.</option>
+        <option>pai2 ian1 bot1 ta ua mok1 lo hup1.</option>
+        <option>taun1 sui1 sit1 aim2 ie li1.</option>
+        <option>pai2 mok1 mok1 ie tia2 su1 hue.</option>
+        <option>pai2 ge aim2 ie tia2 su1 hue.</option>
+        <option>ka1 pia2 kit tit1 lin.</option>
+        <option>pai2 bap kak nui2 aim2 ik2 zep1.</option>
+        <option>kaik aim2 ie sip1 tau2.</option>
+        <option>cuk2 ge mun1 hia1 kait kaik.</option>
+        <option>cuk2 ge non1 kaik.</option>
+        <option>ze1 sue1 mut2. yn2?</option>
+        <option>et2 sau2 kia1 pai2 ie nut2 mok1 ua mi2 sep mui1 ta.</option>
+        <option>et2 ut2 kia1 mua2 hia1 mok1 sep mui1 yn2?</option>
+        <option>zap2 aim2 cy2 ie ma1 sy2.</option>
+        <option>ma1 sy2 ut2 mok1 ta sak2 sau2.</option>
+        <option>ta1 mua2 kua2 a zui1 ak1 pau1 ua mun1 kait can2 sak2.</option>
+        <option>pai2 ge ly num1 be1 hia1.</option>
+        <option>ka1 kia1 pua2 gak1.</option>
+        <option>zap2 mun1 mok1 ian1 su1 ie ta1 kik1.</option>
+        <option>zap2 hop1 aim2 uep1 sip1 a pua2 tak1.</option>
+        <option>zap2 hia1 aip1 y1.</option>
+        <option>zap2 hia1 mot2 ze1 sip1.</option>
+        <option>zap2 mot2 ta nan2 kik1?</option>
+        <option>kan1 kik1 mun1 mok1.</option>
+        <option>pai2 ta1 ie cet2 xuo1.</option>
+        <option>ak1 ge aim2 ie cet2.</option>
+        <option>zap2 aim2 kun2 et2 huok2 tak1.</option>
+        <option>ap1 xot1 aim2 ie et2 pet2.</option>
+        <option>tam2 py zep1 huet zep1 at lip zep1.</option>
+        <option>tam2 a huet zep1 bap kait ie lip zep1.</option>
+        <option>hok1 su1 hue aim2 tan1 tau2. </option>
+        <option>nau lit1 ka1 hue</option>
+        <option>ka1 hue nau lo1.</option>
+        <option>ka1 hue mun1 py iam1 lo1.</option>
+        <option>naip2 kak mun1 py iam1 lo1.</option>
+        <option>nau zau non1 uo1.</option>
+        <option>hia1 nam2 ut2 iam1.</option>
+        <option>zep1 pai2 zap2 em nan2 hop1 ta ze1 ku.</option>
+        <option>pai2 ge huep2 hia1 dat2 ly kua2 pai2 ge a taun1 nim2 sip1 a huep2 hia1.</option>
+        <option>niek1 po1 dat2 hia1 ian1 niek1 nua2 tun2 at uaip2 hue a po1.</option>
+        <option>kua2 bia1 dat2 xom1 mak2 ta aim2 ie zuo1 a cuk2.</option>
+        <option>ma1 pit1 mot2 ta taun1 mut2 ua kaik mok1 dat2 uaip2 ta cuk2.</option>
+        <option>huap1 su1 dat2 huap1 et2 pet2 y1 sui1 a su1 mak2.</option>
+        <option>cuk2 kait dat2 ly can2 et2 kia1 nan2 mak2 kak cuk2 ge naip2.</option>
+        <option>sep su1 dat2 uaip2 su1 la1 sep su1.</option>
+        <option>nua2 ka1 nua2 suo2.</option>
+        <option>uep1 sip1 ka1 iak1 huap1 a sip1.</option>
+        <option>ze1 kit ma1 su1.</option>
+        <option>zap2 aim2 cy2 ta cei2 hup1.</option>
+        <option>zap2 lok1 lia1 a cuk2.</option>
+        <option>mua2 can2 lok1 lia1 a cuk2 nan2 kak sak2 ka1 hue?</option>
+        <option>ie hak2 let1 aim2 ut2.</option>
+        <option>pai2 aim2 hop1 ut2 let1 a kik1.</option>
+        <option>ie zap2 ge et2 ki1 kat1 aim2.</option>
+        <option>zap2 aim2 hop1 et2 ki1 kat1 at ik2 sa1 kat1.</option>
+        <option>pa2 sam1 sak2 ta ie pai2.</option>
+        <option>ka1 hup1 mit.</option>
+        <option>mit ut2 mok1 ta.</option>
+        <option>lup1 kaun1 sak2 ta ie huep2.</option>
+        <option>pai2 ki1 kat1 hia1 kait ni1 lup1.</option>
+        <option>zap2 aim2 zep1 mun1 put.</option>
+        <option>mua2 aim2 zep1 mun1 put.</option>
+        <option>zap2 zep1 ta mun1 put. ka1 xit2 pai2 kan1 puat2 ie zap2.</option>
+        <option>ie ka1 lup1 kaun1 ap1 nun1 a cuk2 py cy2.</option>
+        <option>ie ka1 lup1 kaun1 et2 mok1 hem ap1 nun1 a cuk2 py mok1.</option>
+        <option>zap2 lit1 mok1 ta ie kaik dat2.</option>
+        <option>pai2 ta1 huok2 tak1 a sa1.</option>
+        <option>pai2 hia1 kait iam1 kin2 to2 a iam1 ku.</option>
+        <option>cei2 ka1 kia1 tua1 su1 sau2 mok1.</option>
+        <option>pai2 naip2 a kak tut1 kia1 huat1 pau1.</option>
+        <option>mam1 at sa1 kat1 kit em bap huat1.</option>
+        <option>zap2 aip1 ta.</option>
+        <option>ze1 niep1 ge kit hem1.</option>
+        <option>be1 huep2 hi1 ge aim2 ie pai2.</option>
+        <option>ka1 kia1 dui su1 nan2 su1?</option>
+        <option>zap2 lo mut2 a cuk2.</option>
+        <option>zap2 naip2 ie syt2 tun2 a naip2 hue.</option>
+        <option>zap2 aim2 hop1 ma1 num1 hue a naip2 hue.</option>
+        <option>ka1 mut2 sia1 u1 giau.</option>
+        <option>mua2 nan2 xit2 ian1 su1 ie lip zep1 a tui2 nui2 ak1?</option>
+        <option>ie nan2 hue pai2 py ian1 su1 ie lip zep1 a tui2 nui2 ak1?</option>
+        <option>iam1 ku a kak zap2 mun1 iam1 no1.</option>
+        <option>zap2 ge huat1 hia1 non1.</option>
+        <option>kit1 xuo1 aim2 ie ka1 xuo1 dat2.</option>
+        <option>nut2 bo1.</option>
+        <option>zap2 aim2 tu2 cet2 kaik.</option>
+        <option>zap2 mok1 ta ie kut2 xy1 hue tu2 cet2 kaik.</option>
+        <option>"mua2 ge nan2 hue tu2 cet2 kaik?" "pai2 ge tu2 cet2 kaik ie pai2 mut2."</option>
+        <option>zap2 ge zip1 ta po1.</option>
+        <option>pai2 zip1 ta po1.</option>
+        <option>zap2 a muak1 zip1 po1 ie ma1 nut2 ta.</option>
+        <option>dau2 na1 a xi1 mok1 ta.</option>
+        <option>pai2 ge a kaik dat2 sau2 mok1 ta.</option>
+        <option>tui2 kut2 cuet ie pai2 a!</option>
+        <option>nui2 hue a iam1 ku mun1 non1.</option>
+        <option>zap2 ten1 ten1 det tia2.</option>
+        <option>ten1 ten1 mo1 hua1 at nua2 at kuo1.</option>
+        <option>nan2 cuk2 at lit1 ta taun1 kuo1 ie no1?</option>
+        <option>nau muo1 ten1 ten1.</option>
+        <option>zap2 dat2 sak2 tu2 gau2.</option>
+        <option>lit1 sip1 ak1 mun1 put.</option>
+        <option>zap2 sui1 ky1 hop1 kut2 ta giau1.</option>
+        <option>zap2 sui1 gau2 guk2 ta tyn1 hop1 a gui2.</option>
+        <option>kait tun2 aim2 ua mun1 cuk2 guk2 gui2.</option>
+        <option>ka1 kia1 tum1 sa1 tui2 nui2 cuk2 sak2 ta ie pai2 ge a nui2 hue.</option>
+        <option>ka1 kia1 syt2 kia1 lin.</option>
+        <option>taun1 lek1 aim2 ie ka1 ak1.</option>
+        <option>zap2 aim2 iam1 tua1 nua2.</option>
+        <option>pai2 hia1 kait tua1 nua2.</option>
+        <option>mua2 hia1 guk2 tua1 nua2 yn2?</option>
+        <option>pai2 iam1 tua1 nua2 y tia2.</option>
+        <option>pai2 iam1 tua1 nua2 y det tia2.</option>
+        <option>hup1 hue xi1 mok1 a kak pai2 ge ta1 tua1 hup1.</option>
+        <option>xi1 mok1 ie zo1 a kak pai2 ge ta1 taun1 xuo1.</option>
+        <option>pai2 ly uep ie ka1 hup1 o1.</option>
+        <option>let1 xom1 aim2 ie po1.</option>
+        <option>ka1 lup1 kaun1 kit ma1.</option>
+        <option>lua1 can2 ka1 xau1 hem pai2 ian1 hia1 pai2 mut2.</option>
+        <option>zap2 auk2 bap zap2 kuak1.</option>
+        <option>zat1 syt2 pit1 a cuk2 taun1.</option>
+        <option>zap2 ge ian1 ta su1 ie ka1 mut2.</option>
+        <option>ka1 kia1 pua2 lok1.</option>
+        <option>hup1 aip1 ta ie pua2.</option>
+        <option>pai2 ge tu2 xi1 mok1 ta ie hup1 hue.</option>
+        <option>pai2 ge xi1 mok1 ta ie hup1 hue.</option>
+        <option>mua2 can2 nan2 mak2 cuk2 mok1 lit1 ta ie hup1 hue?</option>
+        <option>ka1 kua2 a huo2 pok ka1 huok2.</option>
+        <option>ka1 mit niek1 ik2 dat2.</option>
+        <option>zap2 muo1 ta mok1 nui2 hue.</option>
+        <option>ka1 ian1 sit1 mut2 ka1 sip1 a (a).</option>
+        <option>ian1 lo ta ka1 mut2.</option>
+        <option>lo sak2 ta ka1 mut2.</option>
+        <option>hup1 aip1 ta.</option>
+        <option>li2 aim2 ie hup1 hop1.</option>
+        <option>lup1 hia1 kait iam1 li2.</option>
+        <option>hi1 ge dat2 ta.</option>
+        <option>mam1 ge huat1 dat2 ta ua iam1 ku ua huat1 zep1.</option>
+        <option>pai2 aim2 hop1 nun1 kit1 let1 su1.</option>
+        <option>ie pai2 ue1 let1 su1 aim2.</option>
+        <option>tum1 sik2 kit tum1.</option>
+        <option>tum1 sik2 li2 ly taun1 a dat2 sak2 tum1 sik2.</option>
+        <option>zap2 a xi1 ho2 mot2 ta.</option>
+        <option>buo1 xom1 aim2 ie huep2.</option>
+        <option>mua2 py hop1 kot tia2 y det tia2 y io2 sik2.</option>
+        <option>nan2 kak be1 huep2 mot2?</option>
+        <option>xo1 xizi hia1 mok1 ie det tia2 su1 hue.</option>
+        <option>pai2 at zap2 ge mok1 huat1 ta1 ie tia2 su1 hue.</option>
+        <option>zap2 ta1 ak1 ie zap2 a ly hue1 kak.</option>
+        <option>ka1 kia1 hui2 xizi kit puat2 puak1.</option>
+        <option>et2 sau2 kia1 hui2 xizi sak2 ta.</option>
+        <option>hui2 xizi nan2 hue a cuk2?</option>
+        <option>zap2 naip2 at hui2 xizi.</option>
+        <option>hui2 xizi mun1 py mok1 mut2.</option>
+        <option>hui2 xizi a lip zep1 zep1 cuop2 mun1 kait.</option>
+        <option>ka1 su1 ni1 su1.</option>
+        <option>ka1 kin2 su1 ni1 su1.</option>
+        <option>ka1 kak pai2 a sa1 huok1 mun1 nui2.</option>
+        <option>zap2 tui2 pok ie co1.</option>
+        <option>zap2 kun2 kok1 pok ie co1.</option>
+        <option>pai2 hia1 kait siet1 nua2.</option>
+        <option>kot hue kit ma1.</option>
+        <option>pai2 a naip2 hue kit pua2 mun1.</option>
+        <option>mut2 aim2 kan1.</option>
+        <option>syt2 nua2 a xot1 pai2 ge ket aim2 ie mut2.</option>
+        <option>huo2 sy2 aim2 kan1.</option>
+        <option>hup1 huo2 aim2 kan1.</option>
+        <option>huo2 sy2 ka1 huok2.</option>
+        <option>hup1 huo2 ka1 huok2.</option>
+        <option>sia1 lai1 sip1 cuk2 sui1 im1 kua2 kua2 ak1.</option>
+        <option>pai2 kuak1 at pai2 mok1 sep saup1.</option>
+        <option>zap2 hia1 kait sep saup1.</option>
+        <option>pai2 sa1 kat1 a pia2 co1.</option>
+        <option>ak1 xizi aim2 tia2 su1 hue.</option>
+        <option>ak1 xizi ie nan2 nui2 pek2 zep1?</option>
+        <option>mua2 can2 ak1 xizi yn2?</option>
+        <option>ak1 xizi py zep1 taun1 nim2 a zep1.</option>
+        <option>ak1 xizi a naip2 uo1 pek1 yn2?</option>
+        <option>ak1 xizi mun1 hia1 kait tin1 a naip2.</option>
+        <option>taun1 sue1 mut2 aim2 ie kua2 hue.</option>
+        <option>ly sui1 ka1 bu1 ua tui2 mok1 tak1.</option>
+        <option>sui1 ka1 bu1 ua ly tui2 mok1 tak1.</option>
+        <option>ka1 po1 mun1 o1.</option>
+        <option>zap2 huet aip1 ta.</option>
+        <option>ka1 cet2 sui1 hup1 zau ian1.</option>
+        <option>zap2 aim2 ian1 lek1.</option>
+        <option>kat1 guk2 mam1 kuak1 a num1.</option>
+        <option>tut1 kia1 zap2 kua2 a ak1 guk2 ta1.</option>
+        <option>zap2 pet2 ho1 a sep mui1 cuk2.</option>
+        <option>sep mui1 cuk2 aim2 mi2 sak2 mui1 tuk2.</option>
+        <option>sep mui1 cuk2 hop1 sep ta mui1 ua iam1 ta.</option>
+        <option>ka1 ne2 a xiop1 liok1.</option>
+        <option>io uai1 zep1 uai1 ie mua2 tui2 ak1.</option>
+        <option>zap2 bet2 mok1 kaun1.</option>
+        <option>hia1 cy2 ut2.</option>
+        <option>zap2 ge kit huat1 hia1 kait.</option>
+        <option>pa2 aim2 zep1 ba2 ba2.</option>
+        <option>ni1 ne2 ket zep1 ne2 ne2.</option>
+        <option>mut2 kan1 mot2 ta.</option>
+        <option>pai2 can2 mok1 muak1 a sit1.</option>
+        <option>kot hup1 mun1 auk2 mok1 ie non1 huep2.</option>
+        <option>nua2 det aim2 ie kot hup1.</option>
+        <option>nua2 det aim2 ie kot hop1.</option>
+        <option>nua2 det aim2 ie ni1 hup1.</option>
+        <option>taun1 sia1 mut2 aim2 ie ai2 sip1.</option>
+        <option>taun1 hem1 zo1 nut2 aim2 ie ai2 sip1.</option>
+        <option>kot hop1 ut2 mok1 ie kat2.</option>
+        <option>kat2 sak2 ta.</option>
+        <option>nut2 a nua2 sue1 ka1 cei2 kit1 zuo1.</option>
+        <option>kan1 aim2! sam1 mok1!</option>
+        <option>su1 la1 zip1 su1 ta.</option>
+        <option>zap2 ta1 ta et2 maun1 gua2 kauk2.</option>
+        <option>zap2 ge huat1 puak1 ta.</option>
+        <option>pai2 ki1 kat1 mok1 auk2 ta.</option>
+        <option>zap2 tui2 ie hi1 et2 niep1 tia2.</option>
+        <option>gau2 a man1 aim2 ie kin2 o1.</option>
+        <option>tua1 py ian1 no1.</option>
+        <option>mua2 a mut2 sin1 ka1 nan2?</option>
+        <option>nua2 co1 bo1 hup1 hue.</option>
+        <option>at lit1 tum1 hua1 ie det tia2.</option>
+        <option>ka1 pai2 a (a).</option>
+        <option>zap2 ge aim2 tu2 nin1 cet2 kaik.</option>
+        <option>zap2 sam1 ut2 mok1 aum2 po1.</option>
+        <option>pai2 aim2 gau2 nin1.</option>
+        <option>cue1 kak ge pai2 ge huat1 zep1.</option>
+        <option>kaun1 ka1 kak bot1 ta.</option>
+        <option>kaun1 giau1 bot1 ta.</option>
+        <option>dui ko1 ka1 lup1.</option>
+        <option>mua2 hok1 hem hia1 in2 ut2 giau1.</option>
+        <option>ly na1. cue1 cuk2 aim2 hok1.</option>
+        <option>non1 tun2 aim2 pai2 a.</option>
+        <option>ie mua2 tui2 pai2 zep1 zep1 cei2 lin xizi.</option>
+        <option>lin xizi aim2 kun2 nuok2 tak1.</option>
+        <option>cai1 ku kit non1.</option>
+        <option>ma1 pa2 aim2 zap2.</option>
+        <option>ik2 sip1 a huep2 hia1 kit huat1 pau1.</option>
+        <option>yk2 kiak1 a huep2 hia1 kit huat1 pau1.</option>
+        <option>ie cuk2 huat1 pau1.</option>
+        <option>kot hop1 mok1 ta ie xem1 pok.</option>
+        <option>pai2 aim2 hua1 det tia2 a det.</option>
+        <option>sip1 huat1 pau1 hem huep2 hia1 bap huat1 pau1.</option>
+        <option>huep2 huat1 pau1 hem huep2 hia1 bap huat1 pau1.</option>
+        <option>cei2 ka1 hue tei1 muo1 aim2.</option>
+        <option>po1 o1.</option>
+        <option>su1 mun1 aim2 zap2.</option>
+        <option>syt2 aim2 pit1.</option>
+        <option>pai2 hia1 kait tua1 bait.</option>
+        <option>ka1 kuo1.</option>
+        <option>ka1 kuo1 tuik1.</option>
+        <option>ka1 em kuo1.</option>
+        <option>zap2 sui1 io1 kua2 lek1.</option>
+        <option>ta1 ze1 mak2 lek1 hem pai2 ge can2 sak2 cuk2 mok1 ta taun1.</option>
+        <option>mua2 kua2 hy2 lek1 ka1 kait yn2?</option>
+        <option>ka1 nut2 nua2 sam1 mok1 gak1. </option>
+        <option>sau2 hop1!</option>
+        <option>ly sau2 mua2 hop1!</option>
+        <option>zap2 hia1 gau2 ka1 hup1 hop1.</option>
+        <option>be1 a kan1 tua1 hup1 guk2 gau2 ta.</option>
+        <option>ik2 gy1 om2 ka1 net2.</option>
+        <option>lok1 lia1 ka1 be1 huep2 a zep1.</option>
+        <option>zap2 aim2 lua1 can2 lok1 lia1.</option>
+        <option>ma1 kan1 mot2 ta mut2.</option>
+        <option>hei2 kat1 mun1 hop1 mok1 nui2 hue a su1.</option>
+        <option>mua2 ka1 hue uaip2 hei2 a et2 pui1 kait cuk2</option>
+        <option>tum1 sik2 li2 aim2 dat2 sak2 tum1 sik2 ie xuo1.</option>
+        <option>nin1 su1 co1 ta.</option>
+        <option>pai2 ge naip2 hi1.</option>
+        <option>pai2 tim1 mua2 a i2 zep1.</option>
+        <option>zap2 ut2 mok1 ta ie gau2 aum2.</option>
+        <option>be1 uo1 kait tun2 sak2!</option>
+        <option>ka1 lin tum1 hua1.</option>
+        <option>ka1 mun1 put a nin1 su1.</option>
+        <option>ze1 nin1 su1 mun1 put.</option>
+        <option>zap2 hua1 kuot1.</option>
+        <option>zap2 hua1 det tia2 a det.</option>
+        <option>kia1 pet2 aim2 yk2.</option>
+        <option>pai2 a kuak1 kaik kauk2.</option>
+        <option>ka1 et2 buo1 muak1.</option>
+        <option>nua2 bon2 aim2 zip1 ian1 nua2.</option>
+        <option>io2 sik2 mok1 ka1 bon2 a po1.</option>
+        <option>cuk2 mun1 ie huet pia2.</option>
+        <option>kuak1 muo1 ta iam1 no1.</option>
+        <option>hei2 su1 a sip1 ly guk2 uaip2.</option>
+        <option>lok1 cuop2 kit hem1.</option>
+        <option>zap2 zat1 ut2 mot2 hem zap2 mun1 mok1 sui1 lup1 kik1.</option>
+        <option>zap2 aim2 uep ie co1.</option>
+        <option>taun1 uep aim2 ie sia1 tak1.</option>
+        <option>zap2 ge aim2 naip2 ie kaik dat2.</option>
+        <option>zap2 ge mok1 naip2 ie kaik dat2.</option>
+        <option>zap2 mo1 lin mok1.</option>
+        <option>et2 uet at et2 zuo1 bu1 io2 sik2 at mok1 hia1 po1 tum1 sik2 ten1 kan1.</option>
+        <option>kan1 ian1 ta ua mot2 co1 tet aim2.</option>
+        <option>huet kak pai2 ge xi1 mok1 ta cei2 gat2 kan1.</option>
+        <option>pai2 mam1 zep1 huet kak nau mok1 ian1 ie po1.</option>
+        <option>pai2 ge sui1 tuk2 sep ta et2 mui1.</option>
+        <option>pit1 xo2 mok1 tyn1 ua mok1 ky1.</option>
+        <option>hui2 lek1 aim2 ie co1.</option>
+        <option>zap2 aim2 kut2 gau2 hup1.</option>
+        <option>mua2 ly tui2 nua2 ie xuo1.</option>
+        <option>kue cue mun1 py co1 lit1 ie nua2. </option>
+      </select> 
+  </div>
+    <section class="main-controls">
+     
+
+    </section>
+
+    <section class="sound-clips">
+
+      <!-- <article class="clip">
+        <audio controls></audio>
+        <a href="">Download clip</a>
+      </article> -->
+
+    </section>
+
+  </div>
+
+    <!-- Below is your custom application script -->
+
+    <script src="scripts/app.js"></script>
+	
+</body>
+</html>
