@@ -25,9 +25,8 @@ function f() {
   var text_human = document.createElement('p');
   var text_synth = document.createElement('p');
   var clipLabel = document.createElement('p');
-  var human_audio_tag = document.createElement('audio');
-  var synth_audio_tag = document.createElement('audio');
-  human_audio_tag.src = `audio_sentences/${cleaned_clipname}.oga`;
+  var human_audio = document.createElement('audio');
+  human_audio.src = `audio_sentences/${cleaned_clipname}.oga`;
 
   let uris = sylls.map(a => `audio_syllables/${a}.mp3`);
   let proms = uris.map(uri => fetch(uri).then(r => r.blob()));
@@ -35,25 +34,18 @@ function f() {
     let blob = new Blob([...blobs]),
       blobUrl = URL.createObjectURL(blob),
       synth_audio = new Audio(blobUrl);
-    synth_audio_tag.src = URL.createObjectURL(synth_audio);
-    synth_audio.playbackRate = 2;
-    synth_audio_tag.playbackRate = 2;
-    synth_audio.play();
+      synth_audio.playbackRate = 2;
+      synth_audio.play();
 
     clipContainer.classList.add('clip');
-    human_audio_tag.setAttribute('controls', '');
+    human_audio.setAttribute('controls', '');
 
     clipLabel.innerHTML = clipName;
 
     text_human.innerHTML = "Human: ";
-    text_synth.innerHTML = "Primitive Synth: ";
     clipContainer.appendChild(text_human);
-    clipContainer.appendChild(human_audio_tag);
+    clipContainer.appendChild(human_audio);
     clipContainer.appendChild(clipLabel);
-    clipContainer.appendChild(text_synth);
-    clipContainer.appendChild(synth_audio_tag);
-    clipContainer.appendChild(clipLabel);
-    clipContainer.appendChild(document.createElement("hr"));
 
     //text_synth.innerHTML = "Crude synthesis: ";
     //clipContainer.appendChild(text_synth);
