@@ -34,6 +34,7 @@ function f() {
     let blob = new Blob([...blobs]),
       blobUrl = URL.createObjectURL(blob),
       synth_audio = new Audio(blobUrl);
+      synth_audio.play();
 
     clipContainer.classList.add('clip');
     human_audio.setAttribute('controls', '');
@@ -45,9 +46,9 @@ function f() {
     clipContainer.appendChild(human_audio);
     clipContainer.appendChild(clipLabel);
 
-    text_synth.innerHTML = "Crude synthesis: ";
-    clipContainer.appendChild(text_synth);
-    clipContainer.appendChild(synth_audio);
+    //text_synth.innerHTML = "Crude synthesis: ";
+    //clipContainer.appendChild(text_synth);
+    //clipContainer.appendChild(synth_audio);
 
     soundClips.appendChild(clipContainer);
   });
